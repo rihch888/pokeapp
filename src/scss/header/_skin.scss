@@ -1,9 +1,11 @@
+@import "../global.scss";
+
 .header {
-    background-color: #42dbcf !important;
-    color: #fff !important;
+    background-color: $green !important;
+    color: $white !important;
 }
 
 .dark .header {
-    background-color: #15202B !important;
-    color: #f3f3f3!important;
+    background-color: $dark-comp !important;
+    color: $dark-words !important;
 }

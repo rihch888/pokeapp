@@ -1,23 +1,25 @@
+@import "../global.scss";
+
 .poke-card {
-    background-color: #fff !important;
+    background-color: $white !important;
 }
 
 .dark .poke-card {
-    background-color: #15202B !important;
+    background-color: $dark-comp !important;
 }
 
 .dark .poke-card .v-list-item__title, .dark .poke-card .v-card__text {
-    color: #f3f3f3!important;
+    color: $dark-words !important;
 }
 
 .dark .poke-card .v-btn__content {
-    color: #42dbcf;
+    color: $green;
 }
 
 .dark .poke-select-card, .dark .poke-select-card .v-list {
-    background-color: #15202B !important;
+    background-color: $dark-comp !important;
 }
 
 .dark .poke-select-card .v-card__title, .dark .poke-select-card .v-list-item__content {
-    color: #f3f3f3!important;
+    color: $dark-words !important;
 }

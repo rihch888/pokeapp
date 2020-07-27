@@ -4,6 +4,7 @@
 @import 'app/skeleton';
 @import 'card/skin';
 @import 'card/skeleton';
+@import "./global.scss";
 
 .home {
     margin-top: 25px;
@@ -52,27 +53,27 @@
 }
 
 .dark .v-list {
-    background: #15202B !important;
+    background: $dark-comp !important;
 }
 
 .dark .v-list-item:not(.v-list-item--active):not(.v-list-item--disabled) {
-    color: #f3f3f3 !important;
+    color: $dark-words !important;
 }
 
 .dark .v-btn {
-    color: #f3f3f3;
+    color: $dark-words;
 }
 
 .dark .v-label {
-    color: #f3f3f3;
+    color: $dark-words;
 }
 
 .dark .poke-select-card .v-btn__content {
-    color: #42dbcf;
+    color: $green;
 }
 
 .dark .v-select__selection {
-    color: #fafafa !important;
+    color: $dark-words !important;
 }
 
 .v-application p {
