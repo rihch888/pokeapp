@@ -1,27 +1,63 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
+import Home from '../views/Home'
+import Register from '../views/Auth/Register';
+import Login from '../views/Auth/Login';
+import PokemonDetail from '../views/PokemonDetail';
+import PageNotFound from '../views/PageNotFound';
+import firebase from 'firebase';
 
 Vue.use(VueRouter)
 
   const routes = [
   {
-    path: '/',
-    name: 'Home',
-    component: Home
+    path: "*",
+    name: 'pageNotFound',
+    component: PageNotFound,
   },
   {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
-  }
+    path: '/home',
+    name: 'home',
+    component: Home,
+    meta: {
+      requiresAuth: true
+    }
+  },
+  {
+    path: '/',
+    name: 'login',
+    component: Login
+  },
+  {
+    path: '/register',
+    name: 'register',
+    component: Register
+  },
+  {
+    path: '/pokemonDetail',
+    name: 'pokemonDetail',
+    component: PokemonDetail,
+    meta: {
+      requiresAuth: true
+    }
+  },
 ]
 
 const router = new VueRouter({
   routes
+})
+
+router.beforeEach((to, from, next) => {
+  if (to.matched.some(r => r.meta.requiresAuth)) {
+    const user = firebase.auth().currentUser;
+    if (user) {
+      next();
+    } else {
+      next('/');
+    }
+  } else {
+    next();
+  }
 })
 
 export default router

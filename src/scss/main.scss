@@ -1,0 +1,163 @@
+@import 'header/skin';
+@import 'header/skeleton';
+@import 'app/skin';
+@import 'app/skeleton';
+@import 'card/skin';
+@import 'card/skeleton';
+
+.home {
+    margin-top: 25px;
+}
+
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.poke-col {
+    width: 75%;
+    padding-left: 30px;
+}
+
+.detail {
+    justify-content: center;
+    padding-top: 40px;
+}
+
+.poke-col-detail-tables {
+    width: 50%;
+}
+
+.v-application .mx-auto {
+    margin-right: 10px !important;
+    margin-left: 10px !important;
+}
+
+.poke-select-col {
+    width: 25%;
+    padding-right: 40px;
+    position: fixed !important;
+    right: 20px;
+}
+
+.selectPokemon {
+    display: flex;
+    justify-content: center;
+}
+
+.v-card__actions {
+    bottom: 0;
+    position: absolute;
+}
+
+.dark .v-list {
+    background: #15202B !important;
+}
+
+.dark .v-list-item:not(.v-list-item--active):not(.v-list-item--disabled) {
+    color: #f3f3f3 !important;
+}
+
+.dark .v-btn {
+    color: #f3f3f3;
+}
+
+.dark .v-label {
+    color: #f3f3f3;
+}
+
+.dark .poke-select-card .v-btn__content {
+    color: #42dbcf;
+}
+
+.dark .v-select__selection {
+    color: #fafafa !important;
+}
+
+.v-application p {
+    margin-bottom: 0 !important;
+}
+
+.v-image__image--cover {
+    background-size: contain !important;
+}
+
+.not-found {
+    margin-top: 20px;
+}
+
+/*---------------MOBILE RESOLUTIONS---------------*/
+
+@media (max-width: 1200px) {
+    .poke-card {
+        width: 47%;
+    }
+    .poke-select-col {
+        right: 0px;
+    }
+}
+
+@media (max-width: 989px) {
+    .poke-col {
+        width: 65%;
+        padding-left: 30px;
+    }
+    .poke-card {
+        width: 46%;
+    }
+    .poke-select-col {
+        width: 35%;
+    }
+    .poke-card {
+        height: 692px;
+        max-height: 692px;
+    }
+    .v-card__actions {
+        display: block !important;
+    }
+    .v-input__slot {
+        width: 310px;
+    }
+}
+
+@media (max-width: 767px) {
+    .poke-col {
+        width: 95%;
+    }
+    .poke-card {
+        width: 95%;
+    }
+    .poke-select-col {
+        width: 60%;
+    }
+    .poke-col-detail-tables {
+        width: 70%;
+    }
+    .poke-card {
+        height: 667px;
+        max-height: 667px;
+    }
+}
+
+@media (max-width: 599px) {
+    .v-input__slot {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .poke-select-col {
+        width: 70%;
+        right: -22px;
+    }
+    .v-toolbar__title {
+        display: none;
+    }
+}
+
+@media (max-width: 340px) {
+    .poke-select-col {
+        width: 80%;
+    }
+}

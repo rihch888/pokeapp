@@ -1,0 +1,17 @@
+.poke-card {
+    width: 30%;
+    margin-bottom: 25px;
+    float: left;
+    height: 667px;
+    max-height: 667px;
+}
+
+.poke-card .v-card__text {
+    padding-bottom: 0px;
+    padding-top: 7px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+}
