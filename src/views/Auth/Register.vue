@@ -37,25 +37,24 @@
             counter
             @click:append="show2 = !show2"
           ></v-text-field>
-          <v-btn class="mr-4" color="primary" @click="register" :disabled="this.$v.$invalid">Regístrate</v-btn>
+          <v-btn class="mr-4 my-green" @click="register" :disabled="this.$v.$invalid" x-large>Regístrate</v-btn>
         </form>
         <v-snackbar
           v-model="snackbar"
+          color="red"
         >
           {{ textError }}
-          <template v-slot:action="{ attrs }">
-            <v-btn
-              color="pink"
-              text
-              v-bind="attrs"
-              @click="snackbar = false"
-            >
-              Close
-            </v-btn>
-          </template>
         </v-snackbar>
     </div>
 </template>
+
+<style lang="scss">
+    @import '../../scss/global.scss';
+    .my-green {
+        background-color: $green !important;
+        color: $dark-words !important;
+    }
+</style>
 
 <script>
 import { validationMixin } from 'vuelidate';
